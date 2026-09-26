@@ -149,3 +149,11 @@
 | **K6** | `Heal` | `H` | Use Medkit / Usar Cura |
 | **K7** | `Prone` | `Z` | Prone / Deitar |
 | **K8** | `Crouch` | `C` | Crouch / Agachar |
+
+---
+
+## License / Licença
+
+🇺🇸 Licensed under the [PolyForm Strict License 1.0.0](LICENSE): you may read and use this software for noncommercial purposes only. Modifying it, creating derivative works, redistributing it and any commercial use are not permitted without a separate written license. This software is not open source.
+
+🇧🇷 Licenciado sob a [PolyForm Strict License 1.0.0](LICENSE): você pode consultar e usar estes arquivos apenas para fins não comerciais. Modificar, criar obras derivadas, redistribuir e qualquer uso comercial não são permitidos sem uma licença específica por escrito.
