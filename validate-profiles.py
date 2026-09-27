@@ -66,12 +66,16 @@ def documented_keys(readme, profile_name):
             current_profile, current_set = heading.group(1), None
         elif line.startswith("## "):
             current_profile = None
-        set_heading = re.match(r"\*\*Set (\d+):", line)
+        set_heading = re.match(r"(?:###\s+|\*\*)Set (\d+)\b", line)
         if set_heading:
             current_set = int(set_heading.group(1))
-        row = re.match(r"\| \*\*K(\d+)\*\* \| `([^`]*)` \| ``?\s?(.*?)\s?``? \|", line)
-        if row and current_profile == profile_name and current_set:
-            keys[(current_set, int(row.group(1)))] = (row.group(2), row.group(3).replace(" ", ""))
+        # | **K1** | `Label` | `Ctrl + E` | Action |  (columns may be padded for alignment)
+        cells = [cell.strip() for cell in line.strip().strip("|").split("|")] if line.startswith("|") else []
+        key = re.fullmatch(r"\*\*K(\d+)\*\*", cells[0]) if cells else None
+        if key and len(cells) >= 3 and current_profile == profile_name and current_set:
+            label = cells[1].strip("`")
+            shortcut = re.sub(r"^`+\s?|\s?`+$", "", cells[2]).replace(" ", "")
+            keys[(current_set, int(key.group(1)))] = (label, shortcut)
     return keys
 
 
