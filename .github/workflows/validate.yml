@@ -1,0 +1,22 @@
+name: validate
+
+# Both profiles must be valid, send exactly the keys their labels show, and match README.md.
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  profiles:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Validate profiles against README.md
+        run: python3 validate-profiles.py

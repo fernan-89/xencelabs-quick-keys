@@ -1,0 +1,3 @@
+# The Xencelabs app writes and reads the profiles as UTF-8 XML; keep them byte-for-byte.
+*.pcfg -text
+* text=auto
