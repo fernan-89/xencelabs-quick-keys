@@ -12,6 +12,7 @@
 | `Xencelabs-BackendProfile.pcfg` | Java backend in IntelliJ: navigation, refactoring, debugging, run/test and Git. / Backend Java no IntelliJ: navegação, refatoração, depuração, execução/testes e Git. |
 | `Xencelabs-DevProfile.pcfg` | Development and work: IntelliJ essentials, DataGrip, Windows Terminal, PowerPoint, Discord. / Desenvolvimento e trabalho: o essencial do IntelliJ, DataGrip, Windows Terminal, PowerPoint, Discord. |
 | `Xencelabs-GamingProfile.pcfg` | Gaming: overlays, NVIDIA capture, voice chat, in-game actions. / Jogos: overlays, captura NVIDIA, chat de voz, ações dentro do jogo. |
+| `linux/` | Linux agent: turns the Quick Keys into a command pad for a Linux server, without the Xencelabs driver. / Agente Linux: transforma o Quick Keys num pad de comandos para um servidor Linux, sem o driver da Xencelabs. |
 | `validate-profiles.py` | Checks that every profile is valid and that this README documents it exactly. / Verifica se cada perfil é válido e se este README o documenta exatamente. |
 | `LICENSE` | PolyForm Strict License 1.0.0. |
 
@@ -305,6 +306,13 @@
 - **Atalhos do driver de vídeo:** em alguns PCs, o utilitário gráfico da Intel captura `Ctrl + Alt + seta` para girar a tela, o que roubaria `Back` (Set 1 K8 do Backend) e `NxtChg` (Set 5 K8 do Backend). Desative esses atalhos no utilitário gráfico se a tela girar.
 - **Conflitos:** o mesmo atalho pode ter significados diferentes em cada aplicativo. Por exemplo, `Ctrl + L` limpa o terminal e liga o apontador laser no PowerPoint. A ação depende da janela em foco.
 - **Set 1 e grupo "Default":** o grupo padrão do dispositivo é uma cópia do Set 1. É assim que o aplicativo Xencelabs exporta, não é uma duplicata a ser removida.
+
+---
+
+## 🐧 Linux Server / Servidor Linux
+
+🇺🇸 The `.pcfg` profiles need the Xencelabs app, which runs on Windows and macOS. For a Linux server, [`linux/`](linux/README.md) has an agent that turns the Quick Keys into a **command pad**. Each key runs a configured program, such as a Docker Compose stack or a network diagnostic, the display shows the labels, and the dial switches sets. It runs as a systemd service, installed with `sudo ./install.sh`.<br>
+🇧🇷 Os perfis `.pcfg` precisam do app da Xencelabs, que roda no Windows e no macOS. Para um servidor Linux, a pasta [`linux/`](linux/README.md) tem um agente que transforma o Quick Keys num **pad de comandos**. Cada tecla executa um programa configurado, como uma stack Docker Compose ou um diagnóstico de rede, o visor mostra os rótulos e o dial troca os sets. Ele roda como serviço systemd, instalado com `sudo ./install.sh`.
 
 ---
 

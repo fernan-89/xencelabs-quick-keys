@@ -1,6 +1,7 @@
 name: validate
 
-# Both profiles must be valid, send exactly the keys their labels show, and match README.md.
+# The profiles must be valid, send exactly the keys their labels show, and match README.md;
+# the Linux agent's tests and example configuration must pass.
 on:
   push:
     branches: [main]
@@ -20,3 +21,23 @@ jobs:
       - uses: actions/checkout@v7
       - name: Validate profiles against README.md
         run: python3 validate-profiles.py
+
+  linux-agent:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: linux
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: linux/package-lock.json
+      - run: npm ci --no-audit --no-fund
+      - name: Unit tests (configuration, controller with a fake device, runner)
+        run: npm test
+      - name: Validate the example configuration
+        run: chmod 644 config.example.yml && npm run check
+      - name: shellcheck the installer
+        run: shellcheck --severity=warning install.sh

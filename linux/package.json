@@ -1,0 +1,20 @@
+{
+  "name": "quick-keys-agent",
+  "version": "1.0.0",
+  "description": "Turns a Xencelabs Quick Keys into a command pad for a Linux server.",
+  "type": "module",
+  "private": true,
+  "license": "SEE LICENSE IN ../LICENSE",
+  "bin": { "quick-keys-agent": "src/agent.js" },
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "start": "node src/agent.js",
+    "check": "node src/agent.js --check --config config.example.yml",
+    "probe": "node src/agent.js --probe",
+    "test": "node --test test/*.test.js"
+  },
+  "dependencies": {
+    "@xencelabs-quick-keys/node": "1.0.0",
+    "yaml": "^2.8.0"
+  }
+}
