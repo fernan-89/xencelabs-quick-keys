@@ -1,0 +1,23 @@
+[Unit]
+Description=Xencelabs Quick Keys agent (command pad)
+Documentation=https://github.com/fernan-89/xencelabs-quick-keys/tree/main/linux
+After=network-online.target docker.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=quickkeys
+Group=quickkeys
+# install.sh replaces @NODE@ with the absolute path of the node binary.
+ExecStart=@NODE@ /opt/quick-keys-agent/src/agent.js --config /etc/quick-keys-agent/config.yml
+Restart=on-failure
+RestartSec=5
+# /var/lib/quick-keys-agent: the service user's home and the place for reports written by actions.
+StateDirectory=quick-keys-agent
+WorkingDirectory=/var/lib/quick-keys-agent
+PrivateTmp=true
+ProtectSystem=full
+# NoNewPrivileges is left off on purpose: privileged actions use sudo rules limited to exact commands.
+
+[Install]
+WantedBy=multi-user.target

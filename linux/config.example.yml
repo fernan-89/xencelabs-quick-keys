@@ -1,0 +1,87 @@
+# Quick Keys agent configuration (example for a home-lab server).
+# Install as /etc/quick-keys-agent/config.yml, owned by root and not writable by group/others
+# (the agent refuses to start otherwise): it decides which programs the keys run.
+#
+# Each set has up to 8 keys (K1..K8, top to bottom). A key runs one program directly, without a
+# shell: `command` is the program (absolute path) and its arguments. Use `null` for an empty key.
+#   label           up to 8 characters, shown on the key's display
+#   command         [program, arg1, arg2, ...]
+#   cwd             working directory (absolute path, optional)
+#   env             extra environment variables (optional)
+#   timeoutSeconds  1-3600, default 60; the program is stopped after it
+#   confirm         true = press twice within 3 seconds (for destructive actions)
+# Output goes to the journal: journalctl -u quick-keys-agent
+
+device:
+  brightness: medium      # off | low | medium | full
+  orientation: 0          # 0 | 90 | 180 | 270
+  sleepMinutes: 30
+
+controls:
+  wheel: sets             # turning the dial switches sets; or: none
+  button8: next-set       # the two buttons without a display: next-set | previous-set | none
+  button9: previous-set   # check which physical button is 8 and 9 with: quick-keys-agent --probe
+
+sets:
+  - name: ThinkLab stack
+    color: "#1e90ff"
+    keys:
+      - label: Up
+        command: [/usr/bin/docker, compose, up, -d]
+        cwd: /opt/thinklab/thinklab-platform
+        timeoutSeconds: 300
+      - label: Status
+        command: [/usr/bin/docker, compose, ps]
+        cwd: /opt/thinklab/thinklab-platform
+      - label: Ready
+        command: [/opt/thinklab/thinklab-platform/scripts/stack/wait-ready.sh, "60"]
+        timeoutSeconds: 120
+      - label: Logs
+        command: [/usr/bin/docker, compose, logs, --tail, "100"]
+        cwd: /opt/thinklab/thinklab-platform
+      - label: Restart
+        command: [/usr/bin/docker, compose, restart]
+        cwd: /opt/thinklab/thinklab-platform
+        timeoutSeconds: 300
+        confirm: true
+      - null
+      - null
+      - label: Down
+        command: [/usr/bin/docker, compose, down]
+        cwd: /opt/thinklab/thinklab-platform
+        timeoutSeconds: 300
+        confirm: true
+
+  - name: Network
+    color: "#2ecc71"
+    keys:
+      - label: Diag
+        command: [/opt/home-lab-scripts/network-diagnostics/inspect-network.sh, example.com]
+        env: { NETWORK_OUTPUT_FILE: /var/lib/quick-keys-agent/network-report.txt }
+      - label: Map
+        command: [/opt/home-lab-scripts/network-mapping/map-network.sh, example.com, /var/lib/quick-keys-agent/network-mapping.txt]
+        timeoutSeconds: 120
+      - label: Perf
+        command: [/opt/home-lab-scripts/network-performance/measure-network.sh, example.com]
+        env: { NETWORK_OUTPUT_FILE: /var/lib/quick-keys-agent/network-performance.txt }
+        timeoutSeconds: 120
+
+  - name: Host
+    color: "#ff8c00"
+    keys:
+      - label: Prune
+        command: [/usr/bin/docker, image, prune, --force]
+        timeoutSeconds: 300
+        confirm: true
+      # Privileged actions go through sudo rules limited to the exact command; see README.
+      - label: RstSSH
+        command: [/usr/bin/sudo, --non-interactive, /usr/bin/systemctl, restart, ssh]
+        confirm: true
+      - null
+      - null
+      - null
+      - null
+      - null
+      - label: Reboot
+        command: [/usr/bin/sudo, --non-interactive, /usr/bin/systemctl, reboot]
+        confirm: true

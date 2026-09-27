@@ -1,0 +1,4 @@
+# Xencelabs Quick Keys, wired (28bd:5202) and wireless dongle (28bd:5203).
+# Gives the quickkeys group, and only it, access to the device; the agent runs as that user.
+SUBSYSTEM=="usb", ATTRS{idVendor}=="28bd", ATTRS{idProduct}=="5202|5203", MODE="0660", GROUP="quickkeys"
+KERNEL=="hidraw*", ATTRS{idVendor}=="28bd", ATTRS{idProduct}=="5202|5203", MODE="0660", GROUP="quickkeys"
