@@ -20,7 +20,7 @@ ROOT = Path(__file__).resolve().parent
 # Windows virtual-key codes for the key names used in the profiles.
 VIRTUAL_KEYS = {
     "Ctrl": 17, "Shift": 16, "Alt": 18, "Win": 91, "Tab": 9, "Enter": 13, "Esc": 27,
-    "Space": 32, "Left": 37, "Up": 38, "Right": 39, "Down": 40, "/": 191, "`": 192,
+    "Space": 32, "Insert": 45, "Left": 37, "Up": 38, "Right": 39, "Down": 40, "/": 191, "`": 192,
 }
 
 

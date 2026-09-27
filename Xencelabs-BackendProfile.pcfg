@@ -5,14 +5,14 @@
       <Remote id="0" rotation="2" name="My Quick Keys">
         <Default defaultgroup="1">
           <K>
-            <K1 Motid="1" id="2" Show="1" Actid="2">2|Find|Ctrl+Shift+A|17:0+16:0+65:0</K1>
-            <K2 Motid="2" id="2" Show="1" Actid="2">2|Recent|Ctrl+E|17:0+69:0</K2>
-            <K3 Motid="3" id="2" Show="1" Actid="2">2|Rename|Shift+F6|16:0+117:0</K3>
-            <K4 Motid="4" id="2" Show="1" Actid="2">2|Format|Ctrl+Alt+L|17:0+18:0+76:0</K4>
-            <K5 Motid="5" id="2" Show="1" Actid="2">2|Cmmnt|Ctrl+/|17:0+191:0</K5>
-            <K6 Motid="6" id="2" Show="1" Actid="2">2|StepOv|F8|119:0</K6>
-            <K7 Motid="7" id="2" Show="1" Actid="2">2|Resume|F9|120:0</K7>
-            <K8 Motid="8" id="2" Show="1" Actid="2">2|Build|Ctrl+F9|17:0+120:0</K8>
+            <K1 Motid="1" id="2" Show="1" Actid="2">2|Decl|Ctrl+B|17:0+66:0</K1>
+            <K2 Motid="2" id="2" Show="1" Actid="2">2|Impl|Ctrl+Alt+B|17:0+18:0+66:0</K2>
+            <K3 Motid="3" id="2" Show="1" Actid="2">2|Usages|Alt+F7|18:0+118:0</K3>
+            <K4 Motid="4" id="2" Show="1" Actid="2">2|Test|Ctrl+Shift+T|17:0+16:0+84:0</K4>
+            <K5 Motid="5" id="2" Show="1" Actid="2">2|Fix|Alt+Enter|18:0+13:0</K5>
+            <K6 Motid="6" id="2" Show="1" Actid="2">2|File|Ctrl+Shift+N|17:0+16:0+78:0</K6>
+            <K7 Motid="7" id="2" Show="1" Actid="2">2|Class|Ctrl+N|17:0+78:0</K7>
+            <K8 Motid="8" id="2" Show="1" Actid="2">2|Back|Ctrl+Alt+Left|17:0+18:0+37:0</K8>
             <K9 Motid="9" id="0" Show="1" Actid="0"/>
             <K10 Motid="10" id="0" Show="1" Actid="0"/>
           </K>
@@ -25,55 +25,55 @@
         </Default>
         <CommonAPP>
           <K>
-            <Set id="0" enable="1" name="IDE">
-              <K1 id="2" Actid="2">2|Find|Ctrl+Shift+A|17:0+16:0+65:0</K1>
-              <K2 id="2" Actid="2">2|Recent|Ctrl+E|17:0+69:0</K2>
-              <K3 id="2" Actid="2">2|Rename|Shift+F6|16:0+117:0</K3>
-              <K4 id="2" Actid="2">2|Format|Ctrl+Alt+L|17:0+18:0+76:0</K4>
-              <K5 id="2" Actid="2">2|Cmmnt|Ctrl+/|17:0+191:0</K5>
-              <K6 id="2" Actid="2">2|StepOv|F8|119:0</K6>
-              <K7 id="2" Actid="2">2|Resume|F9|120:0</K7>
-              <K8 id="2" Actid="2">2|Build|Ctrl+F9|17:0+120:0</K8>
+            <Set id="0" enable="1" name="Code">
+              <K1 id="2" Actid="2">2|Decl|Ctrl+B|17:0+66:0</K1>
+              <K2 id="2" Actid="2">2|Impl|Ctrl+Alt+B|17:0+18:0+66:0</K2>
+              <K3 id="2" Actid="2">2|Usages|Alt+F7|18:0+118:0</K3>
+              <K4 id="2" Actid="2">2|Test|Ctrl+Shift+T|17:0+16:0+84:0</K4>
+              <K5 id="2" Actid="2">2|Fix|Alt+Enter|18:0+13:0</K5>
+              <K6 id="2" Actid="2">2|File|Ctrl+Shift+N|17:0+16:0+78:0</K6>
+              <K7 id="2" Actid="2">2|Class|Ctrl+N|17:0+78:0</K7>
+              <K8 id="2" Actid="2">2|Back|Ctrl+Alt+Left|17:0+18:0+37:0</K8>
             </Set>
-            <Set id="1" enable="1" name="DB">
-              <K1 id="2" Actid="2">2|Run|Ctrl+Enter|17:0+13:0</K1>
-              <K2 id="2" Actid="2">2|Format|Ctrl+Alt+L|17:0+18:0+76:0</K2>
-              <K3 id="2" Actid="2">2|NewCon|Ctrl+Shift+Q|17:0+16:0+81:0</K3>
-              <K4 id="2" Actid="2">2|Find|Ctrl+F|17:0+70:0</K4>
-              <K5 id="2" Actid="2">2|Table|Ctrl+N|17:0+78:0</K5>
-              <K6 id="2" Actid="2">2|Refrsh|Ctrl+F5|17:0+116:0</K6>
-              <K7 id="2" Actid="2">2|Close|Ctrl+F4|17:0+115:0</K7>
-              <K8 id="2" Actid="2">2|Commit|Ctrl+Alt+K|17:0+18:0+75:0</K8>
+            <Set id="1" enable="1" name="Rfctr">
+              <K1 id="2" Actid="2">2|Rename|Shift+F6|16:0+117:0</K1>
+              <K2 id="2" Actid="2">2|ExtMtd|Ctrl+Alt+M|17:0+18:0+77:0</K2>
+              <K3 id="2" Actid="2">2|ExtVar|Ctrl+Alt+V|17:0+18:0+86:0</K3>
+              <K4 id="2" Actid="2">2|Inline|Ctrl+Alt+N|17:0+18:0+78:0</K4>
+              <K5 id="2" Actid="2">2|Format|Ctrl+Alt+L|17:0+18:0+76:0</K5>
+              <K6 id="2" Actid="2">2|Import|Ctrl+Alt+O|17:0+18:0+79:0</K6>
+              <K7 id="2" Actid="2">2|Gen|Alt+Insert|18:0+45:0</K7>
+              <K8 id="2" Actid="2">2|Rfctr|Ctrl+Alt+Shift+T|17:0+18:0+16:0+84:0</K8>
             </Set>
-            <Set id="2" enable="1" name="Term">
-              <K1 id="2" Actid="2">2|Clear|Ctrl+L|17:0+76:0</K1>
-              <K2 id="2" Actid="2">2|Cancel|Ctrl+C|17:0+67:0</K2>
-              <K3 id="2" Actid="2">2|Histry|Ctrl+R|17:0+82:0</K3>
-              <K4 id="2" Actid="2">2|NewTab|Ctrl+Shift+T|17:0+16:0+84:0</K4>
-              <K5 id="2" Actid="2">2|Split|Alt+Shift+D|18:0+16:0+68:0</K5>
-              <K6 id="2" Actid="2">2|PaneR|Alt+Right|18:0+39:0</K6>
-              <K7 id="2" Actid="2">2|Find|Ctrl+Shift+F|17:0+16:0+70:0</K7>
-              <K8 id="2" Actid="2">2|Close|Ctrl+Shift+W|17:0+16:0+87:0</K8>
+            <Set id="2" enable="1" name="Debug">
+              <K1 id="2" Actid="2">2|Debug|Shift+F9|16:0+120:0</K1>
+              <K2 id="2" Actid="2">2|BrkPt|Ctrl+F8|17:0+119:0</K2>
+              <K3 id="2" Actid="2">2|StepOv|F8|119:0</K3>
+              <K4 id="2" Actid="2">2|StepIn|F7|118:0</K4>
+              <K5 id="2" Actid="2">2|StepOt|Shift+F8|16:0+119:0</K5>
+              <K6 id="2" Actid="2">2|Resume|F9|120:0</K6>
+              <K7 id="2" Actid="2">2|Eval|Alt+F8|18:0+119:0</K7>
+              <K8 id="2" Actid="2">2|Stop|Ctrl+F2|17:0+113:0</K8>
             </Set>
-            <Set id="3" enable="1" name="PPT">
-              <K1 id="2" Actid="2">2|Start|F5|116:0</K1>
-              <K2 id="2" Actid="2">2|CurSld|Shift+F5|16:0+116:0</K2>
-              <K3 id="2" Actid="2">2|Next|Right|39:0</K3>
-              <K4 id="2" Actid="2">2|Prev|Left|37:0</K4>
-              <K5 id="2" Actid="2">2|Laser|Ctrl+L|17:0+76:0</K5>
-              <K6 id="2" Actid="2">2|Pen|Ctrl+P|17:0+80:0</K6>
-              <K7 id="2" Actid="2">2|Black|B|66:0</K7>
-              <K8 id="2" Actid="2">2|End|Esc|27:0</K8>
+            <Set id="3" enable="1" name="Run">
+              <K1 id="2" Actid="2">2|Run|Shift+F10|16:0+121:0</K1>
+              <K2 id="2" Actid="2">2|RunCtx|Ctrl+Shift+F10|17:0+16:0+121:0</K2>
+              <K3 id="2" Actid="2">2|Build|Ctrl+F9|17:0+120:0</K3>
+              <K4 id="2" Actid="2">2|Rerun|Ctrl+F5|17:0+116:0</K4>
+              <K5 id="2" Actid="2">2|Srvcs|Alt+8|18:0+56:0</K5>
+              <K6 id="2" Actid="2">2|Term|Alt+F12|18:0+123:0</K6>
+              <K7 id="2" Actid="2">2|Probs|Alt+6|18:0+54:0</K7>
+              <K8 id="2" Actid="2">2|RunWin|Alt+4|18:0+52:0</K8>
             </Set>
-            <Set id="4" enable="1" name="Work">
-              <K1 id="2" Actid="2">2|Mute|Ctrl+Shift+M|17:0+16:0+77:0</K1>
-              <K2 id="2" Actid="2">2|Deafen|Ctrl+Shift+D|17:0+16:0+68:0</K2>
-              <K3 id="2" Actid="2">2|Answer|Ctrl+Enter|17:0+13:0</K3>
-              <K4 id="2" Actid="2">2|Search|Ctrl+F|17:0+70:0</K4>
-              <K5 id="2" Actid="2">2|Read|Esc|27:0</K5>
-              <K6 id="2" Actid="2">2|Tasks|Win+Tab|91:0+9:0</K6>
-              <K7 id="2" Actid="2">2|Dsktop|Win+D|91:0+68:0</K7>
-              <K8 id="2" Actid="2">2|Esc|Esc|27:0</K8>
+            <Set id="4" enable="1" name="Git">
+              <K1 id="2" Actid="2">2|Commit|Ctrl+K|17:0+75:0</K1>
+              <K2 id="2" Actid="2">2|Push|Ctrl+Shift+K|17:0+16:0+75:0</K2>
+              <K3 id="2" Actid="2">2|Update|Ctrl+T|17:0+84:0</K3>
+              <K4 id="2" Actid="2">2|GitWin|Alt+9|18:0+57:0</K4>
+              <K5 id="2" Actid="2">2|Rollbk|Ctrl+Alt+Z|17:0+18:0+90:0</K5>
+              <K6 id="2" Actid="2">2|Diff|Ctrl+D|17:0+68:0</K6>
+              <K7 id="2" Actid="2">2|CmtWin|Alt+0|18:0+48:0</K7>
+              <K8 id="2" Actid="2">2|NxtChg|Ctrl+Alt+Shift+Down|17:0+18:0+16:0+40:0</K8>
             </Set>
           </K>
           <R wid="4">
@@ -140,11 +140,11 @@
   </Tools>
   <AppList/>
   <FileNotes>
-    <DataCreated>2026-08-30</DataCreated>
+    <DataCreated>2026-09-27</DataCreated>
     <OS>Win</OS>
     <LanguageSource>Portuguese</LanguageSource>
     <KeyboardSource>0</KeyboardSource>
     <DriverVersion>1.3.5-90</DriverVersion>
-    <Notes>Dev Fix</Notes>
+    <Notes>Backend Java (IntelliJ)</Notes>
   </FileNotes>
 </Root>
