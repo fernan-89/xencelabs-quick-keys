@@ -1,23 +1,63 @@
 # Xencelabs Quick Keys Profiles
 
-🇺🇸 **English:** Repository containing configuration files (`.pcfg`) for the Xencelabs Quick Keys macro pad, focusing on software development productivity and optimized gaming shortcuts on Windows.<br>
-🇧🇷 **Português:** Repositório contendo arquivos de configuração (`.pcfg`) para o macro pad Xencelabs Quick Keys, com foco em produtividade para desenvolvimento de software e atalhos otimizados para jogos no Windows.
+🇺🇸 **English:** Configuration profiles (`.pcfg`) for the Xencelabs Quick Keys macro pad, focused on software development productivity and gaming shortcuts on Windows.<br>
+🇧🇷 **Português:** Perfis de configuração (`.pcfg`) para o macro pad Xencelabs Quick Keys, com foco em produtividade no desenvolvimento de software e em atalhos para jogos no Windows.
+
+---
+
+## 📦 Contents / Conteúdo
+
+| File / Arquivo | Purpose / Finalidade |
+| :--- | :--- |
+| `Xencelabs-DevProfile.pcfg` | Development and work: IntelliJ, DataGrip, terminal, PowerPoint, Discord. / Desenvolvimento e trabalho: IntelliJ, DataGrip, terminal, PowerPoint, Discord. |
+| `Xencelabs-GamingProfile.pcfg` | Gaming: overlays, NVIDIA capture, voice chat, in-game actions. / Jogos: overlays, captura NVIDIA, chat de voz, ações dentro do jogo. |
+| `validate-profiles.py` | Checks that both profiles are valid and that this README documents them exactly. / Verifica se os dois perfis são válidos e se este README os documenta exatamente. |
+| `LICENSE` | PolyForm Strict License 1.0.0. |
+
+🇺🇸 The Quick Keys has **8 programmable keys (K1–K8)**, a **dial** and **5 key sets** you cycle through. Each profile therefore defines up to **40 shortcuts**. The label shown on the device's display is the `Label` column below; the custom labels in these profiles use at most 6 characters.<br>
+🇧🇷 O Quick Keys tem **8 teclas programáveis (K1–K8)**, um **dial** e **5 conjuntos (sets)** de teclas que você alterna. Cada perfil define, portanto, até **40 atalhos**. O rótulo exibido na tela do dispositivo é a coluna `Label` abaixo; os rótulos personalizados destes perfis usam no máximo 6 caracteres.
+
+---
+
+## ✅ Requirements / Requisitos
+
+🇺🇸 **EN:**
+- Windows 10 or 11.
+- Xencelabs Quick Keys connected by USB or through its wireless dongle.
+- The official **Xencelabs** driver/app installed (it provides the import and export options).
+- The target applications with their **default keymaps** (IntelliJ IDEA, DataGrip, Windows Terminal/PowerShell, PowerPoint, Discord, Steam, Ubisoft Connect, NVIDIA GeForce Experience). A remapped shortcut in the application must be remapped in the profile too.
+
+🇧🇷 **PT:**
+- Windows 10 ou 11.
+- Xencelabs Quick Keys conectado por USB ou pelo dongle sem fio.
+- O aplicativo/driver oficial **Xencelabs** instalado (é ele que oferece importar e exportar).
+- Os aplicativos de destino com os **mapas de teclas padrão** (IntelliJ IDEA, DataGrip, Windows Terminal/PowerShell, PowerPoint, Discord, Steam, Ubisoft Connect, NVIDIA GeForce Experience). Um atalho alterado no aplicativo precisa ser alterado também no perfil.
 
 ---
 
 ## ⚙️ How to Import / Como Importar
 
 🇺🇸 **EN:**
-1. Open the **Xencelabs** application.
-2. Select the **Quick Keys** device.
-3. Click the gear icon (Settings) in the top right corner.
-4. Select **Import** and choose the desired `.pcfg` file.
+1. **Back up first:** export your current configuration (see below), because importing replaces it.
+2. Open the **Xencelabs** application.
+3. Select the **Quick Keys** device.
+4. Click the gear icon (Settings) in the top right corner.
+5. Select **Import** and choose the desired `.pcfg` file.
+6. Use the device's set-switching button to cycle through Sets 1–5 and confirm the labels on the display.
 
 🇧🇷 **PT:**
-1. Abra o aplicativo **Xencelabs**.
-2. Selecione o dispositivo **Quick Keys**.
-3. Clique no ícone de engrenagem (Configurações) no canto superior direito.
-4. Selecione **Importar** e escolha o arquivo `.pcfg` desejado.
+1. **Faça backup antes:** exporte sua configuração atual (veja abaixo), porque importar a substitui.
+2. Abra o aplicativo **Xencelabs**.
+3. Selecione o dispositivo **Quick Keys**.
+4. Clique no ícone de engrenagem (Configurações) no canto superior direito.
+5. Selecione **Importar** e escolha o arquivo `.pcfg` desejado.
+6. Use o botão de troca de set do dispositivo para alternar entre os Sets 1–5 e confira os rótulos na tela.
+
+## 💾 Backup and Customization / Backup e Personalização
+
+🇺🇸 **EN:** Use **Export** in the same Settings menu to save your current configuration as a `.pcfg` file. To change a key, edit it in the Xencelabs app and export the profile again over the file in this repository. Then update the tables below and run `python3 validate-profiles.py` (Python 3.9+), which fails if the README and the profiles disagree. Editing the XML by hand is not recommended: each shortcut stores both its display text and the Windows virtual-key codes the device sends, and the two must match.
+
+🇧🇷 **PT:** Use **Exportar** no mesmo menu de Configurações para salvar sua configuração atual como arquivo `.pcfg`. Para mudar uma tecla, edite-a no aplicativo Xencelabs e exporte o perfil de novo por cima do arquivo deste repositório. Em seguida, atualize as tabelas abaixo e rode `python3 validate-profiles.py` (Python 3.9+), que falha se o README e os perfis divergirem. Não é recomendado editar o XML à mão: cada atalho guarda o texto exibido e os códigos de tecla virtual do Windows que o dispositivo envia, e os dois precisam corresponder.
 
 ---
 
@@ -54,15 +94,18 @@
 
 **Set 3: Term (PowerShell & Git)**
 
+🇺🇸 K1–K4 and K8 act in PowerShell (PSReadLine) and Windows Terminal. The Git keys K5–K7 are **IntelliJ** default shortcuts (Commit, Push, Update Project): they work in the IDE window, not in a standalone PowerShell session.<br>
+🇧🇷 K1–K4 e K8 funcionam no PowerShell (PSReadLine) e no Windows Terminal. As teclas de Git K5–K7 são atalhos padrão do **IntelliJ** (Commit, Push, Update Project): funcionam na janela da IDE, não numa sessão avulsa do PowerShell.
+
 | Key / Tecla | Label | Shortcut / Atalho | Action / Ação |
 | :--- | :--- | :--- | :--- |
 | **K1** | `Clear` | `Ctrl + L` | Clear Screen / Limpar Tela |
 | **K2** | `Cancel` | `Ctrl + C` | Cancel Command / Cancelar Comando |
 | **K3** | `Histry` | `Ctrl + R` | Search History / Buscar Histórico |
 | **K4** | `NewTab` | `Ctrl + Shift + T` | New Terminal Tab / Nova Aba |
-| **K5** | `Commit` | `Ctrl + K` | Git Commit / Criar Commit |
-| **K6** | `Push` | `Ctrl + Shift + K` | Git Push / Enviar Alterações |
-| **K7** | `Pull` | `Ctrl + T` | Git Pull / Puxar Alterações |
+| **K5** | `Commit` | `Ctrl + K` | Git Commit (IntelliJ) / Criar Commit (IntelliJ) |
+| **K6** | `Push` | `Ctrl + Shift + K` | Git Push (IntelliJ) / Enviar Alterações (IntelliJ) |
+| **K7** | `Pull` | `Ctrl + T` | Git Update Project (IntelliJ) / Atualizar Projeto (IntelliJ) |
 | **K8** | `Close` | `Ctrl + Shift + W` | Close Tab / Fechar Aba |
 
 **Set 4: PPT (PowerPoint)**
@@ -88,7 +131,7 @@
 | **K4** | `Search` | `Ctrl + F` | Search Chat / Buscar no Chat |
 | **K5** | `Read` | `Esc` | Mark as Read / Marcar como Lido |
 | **K6** | `Tasks` | `Win + Tab` | Task View / Visão de Tarefas |
-| **K7** | `Dsktop` | `Win + D` | Show Desktop / Mostrar Área de Trabalho|
+| **K7** | `Dsktop` | `Win + D` | Show Desktop / Mostrar Área de Trabalho |
 | **K8** | `Esc` | `Esc` | Escape / Fechar |
 
 ---
@@ -134,7 +177,7 @@
 | **K4** | `Reject` | `Esc` | Reject Call / Rejeitar Chamada |
 | **K5** | `PTT` | `V` | Push-to-Talk |
 | **K6** | `Chat` | `Enter` | Open Text Chat / Abrir Chat |
-| **K7** | `DscOvr` | `Shift + ~` | Discord Overlay |
+| **K7** | `DscOvr` | `` Shift + ` `` | Discord Overlay |
 | **K8** | `AltTab` | `Alt + Tab` | Quick Alt-Tab / Trocar de Janela |
 
 **Set 4: InGame (Generic Actions)**
@@ -149,6 +192,58 @@
 | **K6** | `Heal` | `H` | Use Medkit / Usar Cura |
 | **K7** | `Prone` | `Z` | Prone / Deitar |
 | **K8** | `Crouch` | `C` | Crouch / Agachar |
+
+**Set 5: Empty (Xencelabs defaults)**
+
+🇺🇸 Not customized: this set keeps the Xencelabs factory keys (editing and modifier keys). It is a free slot for your own shortcuts.<br>
+🇧🇷 Não personalizado: este set mantém as teclas de fábrica da Xencelabs (edição e modificadores). É um espaço livre para seus próprios atalhos.
+
+| Key / Tecla | Label | Shortcut / Atalho | Action / Ação |
+| :--- | :--- | :--- | :--- |
+| **K1** | `Undo` | `Ctrl + Z` | Undo / Desfazer |
+| **K2** | `Redo` | `Ctrl + Y` | Redo / Refazer |
+| **K3** | `Copy` | `Ctrl + C` | Copy / Copiar |
+| **K4** | `Paste` | `Ctrl + V` | Paste / Colar |
+| **K5** | `Shift` | `Shift` | Hold Shift / Segurar Shift |
+| **K6** | `Control` | `Ctrl` | Hold Ctrl / Segurar Ctrl |
+| **K7** | `Alt` | `Alt` | Hold Alt / Segurar Alt |
+| **K8** | `Space` | `Space` | Space / Espaço |
+
+---
+
+## 🎛️ Dial and Radial Menu / Dial e Menu Radial
+
+🇺🇸 **EN:** Neither profile customizes the dial or the pen tablet's on-screen radial menu; both keep the Xencelabs defaults. The dial's fourth function is **Brush Size** (`[` / `]`). The radial menu offers Undo, Redo, Copy, Paste, Save, Deselect, Enter and Esc.
+
+🇧🇷 **PT:** Nenhum dos perfis personaliza o dial nem o menu radial de tela da mesa digitalizadora; os dois mantêm os padrões da Xencelabs. A quarta função do dial é **Tamanho do Pincel** (`[` / `]`). O menu radial oferece Desfazer, Refazer, Copiar, Colar, Salvar, Desmarcar, Enter e Esc.
+
+---
+
+## ⚠️ Notes / Observações
+
+🇺🇸 **EN:**
+- **Keyboard layout:** the device sends Windows virtual-key codes, not characters. Letter, number, function and modifier keys behave the same on every layout. Punctuation keys (`Ctrl + /` on Dev Set 1 K5 and `` Shift + ` `` on Gaming Set 3 K7) were recorded on a US layout. On other layouts, such as the Brazilian ABNT2, they may produce a different character. If they don't work, re-record them in the Xencelabs app.
+- **Conflicts:** the same shortcut can mean different things in different applications. For example, `Ctrl + L` clears the terminal and turns on the laser pointer in PowerPoint. The action depends on the window in focus.
+- **Sets 1 and "Default":** the device's default group is a copy of Set 1. That is how the Xencelabs app exports it, not a duplicate to clean up.
+
+🇧🇷 **PT:**
+- **Layout do teclado:** o dispositivo envia códigos de tecla virtual do Windows, não caracteres. Letras, números, teclas de função e modificadores funcionam igual em qualquer layout. As teclas de pontuação (`Ctrl + /` no Set 1 K5 do Dev e `` Shift + ` `` no Set 3 K7 do Gaming) foram gravadas num layout americano. Em outros layouts, como o ABNT2 brasileiro, podem gerar outro caractere. Se não funcionarem, grave-as de novo no aplicativo Xencelabs.
+- **Conflitos:** o mesmo atalho pode ter significados diferentes em cada aplicativo. Por exemplo, `Ctrl + L` limpa o terminal e liga o apontador laser no PowerPoint. A ação depende da janela em foco.
+- **Set 1 e grupo "Default":** o grupo padrão do dispositivo é uma cópia do Set 1. É assim que o aplicativo Xencelabs exporta, não é uma duplicata a ser removida.
+
+---
+
+## 🔍 Validation / Validação
+
+🇺🇸 `python3 validate-profiles.py` checks three things, and the CI workflow runs it on every push and pull request:
+- both profiles are valid XML;
+- every key sends exactly the keys its label shows;
+- every key of all 5 sets is documented in this README with the same label and shortcut.
+
+🇧🇷 `python3 validate-profiles.py` verifica três coisas, e o workflow de CI o executa a cada push e pull request:
+- os dois perfis são XML válidos;
+- cada tecla envia exatamente as teclas que seu rótulo mostra;
+- cada tecla dos 5 sets está documentada neste README com o mesmo rótulo e atalho.
 
 ---
 
